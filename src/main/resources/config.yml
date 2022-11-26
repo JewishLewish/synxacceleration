@@ -1,3 +1,4 @@
 acceleration: fast #options are "none", "normal" or "fast" - Normal applies some change. Fast applies heavy speeds.
+deletechestminecart: true #Set to true = This will automatically get rid of minecarts WITH CHESTS!
 
 #For the edits, if it's set to "True" then the .jar plugin will optimize the files. If it's set to "False" then it will not touch it.

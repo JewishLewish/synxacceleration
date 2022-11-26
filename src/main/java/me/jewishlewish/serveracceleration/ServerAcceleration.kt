@@ -7,10 +7,15 @@ class ServerAcceleration : JavaPlugin() {
     override fun onEnable() {
         saveDefaultConfig()
         logger.info("Synx is operating!")
+
         val ac: String? = this.getConfig().getString("acceleration")
         Bukkit.getLogger().info("Acceleration speed is: $ac")
         if ("none" != ac) {
-            fileoptimisation.spigotEdit(ac)
+            serveropt.spigotEdit(ac)
+        }
+
+        if (this.getConfig().getString("deletechestminecart").equals("true")) {
+            serveropt.minechest(ac)
         }
     }
 

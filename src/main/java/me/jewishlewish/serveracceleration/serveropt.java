@@ -1,11 +1,15 @@
 package me.jewishlewish.serveracceleration;
 
 import org.bukkit.Bukkit;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.minecart.StorageMinecart;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class fileoptimisation {
+public class serveropt {
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
@@ -20,4 +24,17 @@ public class fileoptimisation {
             }
         }
     }
-}
+
+    public static void minechest(String ac){
+        for (World w : Bukkit.getWorlds()) {
+            for (Entity e : w.getEntities()) {
+                if ((e instanceof StorageMinecart)) {
+                    Bukkit.getLogger().info("MINECART FOUNDED!");
+                } else {
+                    Bukkit.getLogger().info("what the fuck?");
+                }
+            }
+        }
+                
+        }
+    }
