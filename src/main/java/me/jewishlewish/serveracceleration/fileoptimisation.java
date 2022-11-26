@@ -18,7 +18,6 @@ public class fileoptimisation {
                     } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                     }
-                    Bukkit.getLogger().info("FOUNDED THE FILE:" + ftype);
                     prw.println(new returndata().files(ftype));
                     prw.close();
                 }
