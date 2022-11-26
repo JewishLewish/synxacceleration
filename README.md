@@ -18,3 +18,9 @@ Acceleration Plugin for Small MC Servers written in a mixture of Kotlin and Java
 ``Mob Merge`` -> Making mobs merge.
 
 ``Emergency Mode`` -> Several Changes to files so it can handle bad severe bad TPS attacks .
+
+## How to use it?
+1) Put the plugin's jar file into the plugins folder.
+2) Boot the server so the plugin can give it's config file from there.
+3) Edit the server's config file to the options you want.
+4) Reload the server and the plugin will take it's affect.
