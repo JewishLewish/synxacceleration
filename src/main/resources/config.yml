@@ -1,4 +1,4 @@
-acceleration: normal #options are "none", "normal" or "fast" - Normal applies some change. Fast applies heavy speeds.
+acceleration: fast #options are "none", "normal" or "fast" - Normal applies some change. Fast applies heavy speeds.
 spigotedit: True
 paperedit: True
 bukkitedit: True

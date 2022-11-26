@@ -3,11 +3,21 @@ package me.jewishlewish.serveracceleration;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class fileoptimisation {
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
 
+            PrintWriter prw= null;
+            try {
+                prw = new PrintWriter("spigot.yml");
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+            prw.println(new returndata().files("spigot"));
+            prw.close();
         }
 
     }
