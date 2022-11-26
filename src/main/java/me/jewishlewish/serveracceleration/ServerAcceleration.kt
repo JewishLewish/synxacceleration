@@ -1,12 +1,11 @@
 package me.jewishlewish.serveracceleration
 
 import org.bukkit.plugin.java.JavaPlugin
-import java.io.File
 
 
 class ServerAcceleration : JavaPlugin() {
     override fun onEnable() {
-        saveDefaultConfig();
+        saveDefaultConfig()
 
         logger.info(
             "\n" +
@@ -17,8 +16,8 @@ class ServerAcceleration : JavaPlugin() {
                     "██████╔╝░░░██║░░░██║░╚███║██╔╝╚██╗\n" +
                     "╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝"
         )
-        val obj = fileoptimisation()
-        obj.configread(this);
+
+        fileoptimisation().configread(this);
 
     }
 
