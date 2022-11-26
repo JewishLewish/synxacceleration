@@ -8,8 +8,8 @@ import java.io.PrintWriter;
 public class fileoptimisation {
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
-            String[] fprop = {"bukkit", "spigot", "config\\paper-world-defaults"};
-            PrintWriter prw= null;
+            String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
+            PrintWriter prw;
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
 
