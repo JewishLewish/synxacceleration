@@ -9,15 +9,19 @@ import java.io.PrintWriter;
 public class fileoptimisation {
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
-            if (new File("spigot.yml").exists()) {
-                PrintWriter prw= null;
-                try {
-                    prw = new PrintWriter("spigot.yml");
-                } catch (FileNotFoundException e) {
-                    throw new RuntimeException(e);
+            String[] fprop = {"bukkit", "spigot", "config\\paper-world-defaults"};
+            for(String ftype : fprop){
+                if (new File(ftype+".yml").exists()) {
+                    PrintWriter prw= null;
+                    try {
+                        prw = new PrintWriter(ftype + ".yml");
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                    Bukkit.getLogger().info("FOUNDED THE FILE:" + ftype);
+                    prw.println(new returndata().files(ftype));
+                    prw.close();
                 }
-                prw.println(new returndata().files("spigot"));
-                prw.close();
             }
         }
 
