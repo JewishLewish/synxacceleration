@@ -15,6 +15,7 @@ public class fileoptimisation {
 
                     try {
                         prw = new PrintWriter(ftype + ".yml");
+                        Bukkit.getLogger().info(ftype);
                     } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                     }
@@ -31,11 +32,7 @@ public class fileoptimisation {
         Bukkit.getLogger().info("Acceleration speed is: " + ac);
 
         if (!"none".equals(ac)) {
-            if (plugin.getConfig().getString("spigotedit").equals("true")) {
-                spigotEdit(ac);
-            } else {
-                Bukkit.getLogger().info("ERROR WITH CONFIG! YOU DIDN'T PROPERLY SET ACCELERATION SPEED!");
-            }
+            spigotEdit(ac);
         }
     }
 }
