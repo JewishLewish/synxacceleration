@@ -15,7 +15,7 @@ class ServerAcceleration : JavaPlugin() {
         }
 
         if (this.getConfig().getString("deletechestminecart").equals("true")) {
-            serveropt.minechest(ac)
+            serveropt.minechest()
         }
     }
 

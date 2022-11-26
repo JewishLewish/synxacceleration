@@ -25,7 +25,7 @@ public class serveropt {
         }
     }
 
-    public static void minechest(String ac){
+    public static void minechest(){
         for (World w : Bukkit.getWorlds()) {
             for (Entity e : w.getEntities()) {
                 if ((e instanceof StorageMinecart)) {
@@ -34,5 +34,5 @@ public class serveropt {
             }
         }
                 
-        }
     }
+}
