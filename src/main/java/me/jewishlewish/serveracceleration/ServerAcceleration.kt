@@ -17,7 +17,7 @@ class ServerAcceleration : JavaPlugin() {
                     "╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝"
         )
 
-        fileoptimisation().configread(this);
+        fileoptimisation().configread(this)
 
     }
 
