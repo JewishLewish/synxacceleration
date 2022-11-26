@@ -1,19 +1,14 @@
-package me.jewishlewish.serveracceleration;
+package me.jewishlewish.serveracceleration
 
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.java.JavaPlugin
 
-public final class ServerAcceleration extends JavaPlugin {
-
-    @Override
-    public void onEnable() {
+class ServerAcceleration : JavaPlugin() {
+    override fun onEnable() {
         // Plugin startup logic
-        getLogger().info("Hello World");
-
-
+        logger.info("Hello World")
     }
 
-    @Override
-    public void onDisable() {
+    override fun onDisable() {
         // Plugin shutdown logic
     }
 }

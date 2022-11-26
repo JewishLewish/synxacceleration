@@ -1,4 +1,4 @@
-name: Server Acceleration
+name: ServerAcceleration
 version: '${project.version}'
 main: me.jewishlewish.serveracceleration.ServerAcceleration
 api-version: 1.19
