@@ -5,9 +5,8 @@ import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.minecart.StorageMinecart;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.util.stream.Stream;
 
 public class serveropt {
     static void spigotEdit(String ac) {
@@ -33,5 +32,14 @@ public class serveropt {
             }
         }
                 
+    }
+
+    public static void serverprop() throws IOException {
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("server.properties"))) {
+            Stream<String> lines = bufferedReader.lines();
+            lines.forEach(System.out::println);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
