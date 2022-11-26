@@ -16,7 +16,6 @@ public class serveropt {
             PrintWriter prw;
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
-
                     try {prw = new PrintWriter(ftype + ".yml");} catch (FileNotFoundException e) {throw new RuntimeException(e);}
                     prw.println(new returndata().files(ftype));
                     prw.close();
