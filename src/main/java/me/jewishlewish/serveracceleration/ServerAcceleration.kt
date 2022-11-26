@@ -2,24 +2,23 @@ package me.jewishlewish.serveracceleration
 
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
-import kotlin.math.log
+
 
 class ServerAcceleration : JavaPlugin() {
     override fun onEnable() {
-        logger.info("\n" +
-                "░██████╗██╗░░░██╗███╗░░██╗██╗░░██╗\n" +
-                "██╔════╝╚██╗░██╔╝████╗░██║╚██╗██╔╝\n" +
-                "╚█████╗░░╚████╔╝░██╔██╗██║░╚███╔╝░\n" +
-                "░╚═══██╗░░╚██╔╝░░██║╚████║░██╔██╗░\n" +
-                "██████╔╝░░░██║░░░██║░╚███║██╔╝╚██╗\n" +
-                "╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝")
+        saveDefaultConfig();
 
-
-        if(File("spigot.yml").exists()){
-            logger.info("spigot.yml does exist.")
-        } else {
-            logger.info("spigot.yml does not exist.")
-        }
+        logger.info(
+            "\n" +
+                    "░██████╗██╗░░░██╗███╗░░██╗██╗░░██╗\n" +
+                    "██╔════╝╚██╗░██╔╝████╗░██║╚██╗██╔╝\n" +
+                    "╚█████╗░░╚████╔╝░██╔██╗██║░╚███╔╝░\n" +
+                    "░╚═══██╗░░╚██╔╝░░██║╚████║░██╔██╗░\n" +
+                    "██████╔╝░░░██║░░░██║░╚███║██╔╝╚██╗\n" +
+                    "╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝"
+        )
+        val obj = fileoptimisation()
+        obj.configread(this);
 
     }
 
