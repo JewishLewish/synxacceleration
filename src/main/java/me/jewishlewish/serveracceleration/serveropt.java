@@ -29,9 +29,7 @@ public class serveropt {
         for (World w : Bukkit.getWorlds()) {
             for (Entity e : w.getEntities()) {
                 if ((e instanceof StorageMinecart)) {
-                    Bukkit.getLogger().info("MINECART FOUNDED!");
-                } else {
-                    Bukkit.getLogger().info("what the fuck?");
+                    e.remove();
                 }
             }
         }
