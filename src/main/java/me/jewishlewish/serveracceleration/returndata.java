@@ -295,7 +295,7 @@ public class returndata {
                     "  minimum-api: none\n" +
                     "  use-map-color-cache: true\n" +
                     "spawn-limits:\n" +
-                    "  monsters: 50\n" +
+                    "  monsters: 45\n" +
                     "  animals: 8\n" +
                     "  water-animals: 5\n" +
                     "  water-ambient: 10\n" +
