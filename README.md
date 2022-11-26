@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/570765321/7a3ac59a-e9fa-42a5-9a7f-cb66231fe028" width="1080">
+</p>
+
 # Synx
 Acceleration Plugin for Small MC Servers written in a mixture of Kotlin and Java!
 
