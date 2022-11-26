@@ -1,7 +1,7 @@
 package me.jewishlewish.serveracceleration
 
+import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
-
 
 class ServerAcceleration : JavaPlugin() {
     override fun onEnable() {
@@ -17,7 +17,11 @@ class ServerAcceleration : JavaPlugin() {
                     "╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝"
         )
 
-        fileoptimisation().configread(this)
+        val ac: String? = this.getConfig().getString("acceleration")
+        Bukkit.getLogger().info("Acceleration speed is: $ac")
+        if ("none" != ac) {
+            fileoptimisation.spigotEdit(ac)
+        }
 
     }
 

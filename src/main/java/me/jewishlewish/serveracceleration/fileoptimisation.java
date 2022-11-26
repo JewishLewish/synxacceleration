@@ -15,7 +15,6 @@ public class fileoptimisation {
 
                     try {
                         prw = new PrintWriter(ftype + ".yml");
-                        Bukkit.getLogger().info(ftype);
                     } catch (FileNotFoundException e) {
                         throw new RuntimeException(e);
                     }
@@ -23,16 +22,6 @@ public class fileoptimisation {
                     prw.close();
                 }
             }
-        }
-
-    }
-    public void configread(ServerAcceleration plugin) {
-
-        String ac = plugin.getConfig().getString("acceleration");
-        Bukkit.getLogger().info("Acceleration speed is: " + ac);
-
-        if (!"none".equals(ac)) {
-            spigotEdit(ac);
         }
     }
 }
