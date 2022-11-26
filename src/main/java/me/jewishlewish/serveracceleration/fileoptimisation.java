@@ -1,7 +1,6 @@
 package me.jewishlewish.serveracceleration;
 
 import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -10,9 +9,10 @@ public class fileoptimisation {
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
             String[] fprop = {"bukkit", "spigot", "config\\paper-world-defaults"};
+            PrintWriter prw= null;
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
-                    PrintWriter prw= null;
+
                     try {
                         prw = new PrintWriter(ftype + ".yml");
                     } catch (FileNotFoundException e) {
@@ -34,6 +34,8 @@ public class fileoptimisation {
         if (!"none".equals(ac)) {
             if (plugin.getConfig().getString("spigotedit").equals("true")) {
                 spigotEdit(ac);
+            } else {
+                Bukkit.getLogger().info("ERROR WITH CONFIG! YOU DIDN'T PROPERLY SET ACCELERATION SPEED!");
             }
         }
     }
