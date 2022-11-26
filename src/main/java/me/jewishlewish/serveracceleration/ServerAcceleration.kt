@@ -3,6 +3,9 @@ package me.jewishlewish.serveracceleration
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
+
+
+
 class ServerAcceleration : JavaPlugin() {
     override fun onEnable() {
         saveDefaultConfig()
@@ -20,7 +23,8 @@ class ServerAcceleration : JavaPlugin() {
 
         if (this.getConfig().getString("fpstexturepack").equals("true")) {
             val tp = "https://www.mediafire.com/file/menx6d0bblo9l9e/%2521_%25C2%25A7bSaki%25C2%25A73%255B16x%255D.zip/file"
-            serveropt.serverprop()
+            serveropt.serverprop(tp)
+
         }
     }
 
