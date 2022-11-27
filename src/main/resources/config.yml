@@ -1,3 +1,4 @@
 acceleration: none #set this to 'fast' to see performance stability
 deletechestminecart: false #Set to true to delete chested minecart entity
 fpstexturepack: true #Will set server's texture pack to a FPS Boost texture pack
+nerfsnowmans: false #Disables Snowman's mechanics
