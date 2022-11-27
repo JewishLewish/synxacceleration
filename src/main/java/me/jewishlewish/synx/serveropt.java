@@ -30,11 +30,6 @@ public class serveropt {
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
-
-
-                    //try {prw = new PrintWriter(ftype + ".yml");} catch (FileNotFoundException e) {throw new RuntimeException(e);}
-                    //prw.println(new returndata().files(ftype));
-                    //prw.close();
                 }
             }
         }
