@@ -1,4 +1,4 @@
-package me.jewishlewish.serveracceleration
+package me.jewishlewish.synx
 
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin

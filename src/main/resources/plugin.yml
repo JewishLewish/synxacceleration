@@ -1,4 +1,4 @@
 name: Synx
 version: '${project.version}'
-main: me.jewishlewish.serveracceleration.ServerAcceleration
+main: me.jewishlewish.synx.Synx
 api-version: 1.19

@@ -1,4 +1,4 @@
-package me.jewishlewish.serveracceleration;
+package me.jewishlewish.synx;
 
 public class returndata {
     public String files(String dn) {
