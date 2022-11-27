@@ -45,7 +45,7 @@ public class serveropt {
         Path target= Paths.get("server.properties");
         String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
 
-        if (content.contains("resource-pack=" + tp)){
+        if (!content.contains("resource-pack=" + tp)){
             content = content.replaceAll("\n" + "resource-pack=", "\n" + "resource-pack=" + tp);
             Files.write(target, content.getBytes(StandardCharsets.UTF_8));
             Bukkit.getLogger().info("Texture pack successfully placed!");
