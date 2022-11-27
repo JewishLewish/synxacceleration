@@ -17,6 +17,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class serveropt {
+
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
@@ -30,7 +31,6 @@ public class serveropt {
             }
         }
     }
-
     public static void minechest(){
         for (World w : Bukkit.getWorlds()) {
             for (Entity e : w.getEntities()) {

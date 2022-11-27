@@ -3,11 +3,9 @@ package me.jewishlewish.serveracceleration
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 
-
-
-
-class ServerAcceleration : JavaPlugin() {
+class Synx : JavaPlugin() {
     override fun onEnable() {
+
         saveDefaultConfig()
         logger.info("Synx is operating!")
 
