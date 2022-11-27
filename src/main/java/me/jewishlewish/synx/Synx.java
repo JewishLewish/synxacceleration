@@ -1,6 +1,7 @@
 package me.jewishlewish.synx;
 
 import org.bukkit.Bukkit;
+import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 
@@ -31,6 +32,9 @@ public final class Synx extends JavaPlugin {
 
         }
         getServer().getPluginManager().registerEvents(new Events(), this);
+        if (this.getConfig().getString("nerfsnowmans").equals("false")) {
+            CreatureSpawnEvent.getHandlerList().unregister(this);
+        }
     }
 
     @Override
