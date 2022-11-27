@@ -20,7 +20,7 @@ public class Events implements Listener {
     @EventHandler
     public void snow(EntityBlockFormEvent e)
     {
-        if(e.getEntity() instanceof Snowman){}
+        if(e.getEntity() instanceof Snowman)
             if(e.getNewState().getType() == Material.SNOW)
                 e.setCancelled(true);
     }
