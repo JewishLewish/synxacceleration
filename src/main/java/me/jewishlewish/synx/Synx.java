@@ -30,6 +30,7 @@ public final class Synx extends JavaPlugin {
             }
 
         }
+        getServer().getPluginManager().registerEvents(new Events(), this);
     }
 
     @Override
