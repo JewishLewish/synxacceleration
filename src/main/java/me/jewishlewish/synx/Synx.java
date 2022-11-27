@@ -32,6 +32,7 @@ public final class Synx extends JavaPlugin {
 
         }
         getServer().getPluginManager().registerEvents(new Events(), this);
+
         if (this.getConfig().getString("nerfsnowmans").equals("false")) {
             CreatureSpawnEvent.getHandlerList().unregister(this);
         }
