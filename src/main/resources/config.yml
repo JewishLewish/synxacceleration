@@ -1,4 +1,8 @@
-acceleration: none #set this to 'fast' to see performance stability
-deletechestminecart: false #Set to true to delete chested minecart entity
-fpstexturepack: true #Will set server's texture pack to a FPS Boost texture pack
-nerfsnowmans: false #Disables Snowman's mechanics
+#acceleration focuses on the optimisation of files. Performance wise: heavy change
+acceleration: none
+#deletechestminecart focuses on the removal of unncessarily minecart chests. Wills with server's ticks. Performance: small-medium change (matters on server's size)
+deletechestminecart: false
+#fpstexturepack gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
+fpstexturepack: true
+#nerfsnowman completely disables Snowman's AI to counter snowball ticks, big snow trial ticks and it's AI ticks. Performance: small (matters on server's size)
+nerfsnowmans: false
