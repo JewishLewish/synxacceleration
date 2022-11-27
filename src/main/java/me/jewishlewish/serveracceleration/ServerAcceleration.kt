@@ -22,7 +22,7 @@ class ServerAcceleration : JavaPlugin() {
         }
 
         if (this.getConfig().getString("fpstexturepack").equals("true")) {
-            val tp = "https://www.dropbox.com/s/a8vgtqlaoylkyx8/fpsboost.zip?dl=1"
+            val tp = "https://www.dropbox.com/s/8wphrs2ht7pr13x/Bare%2BBones%2B1.19.zip?dl=1"
             serveropt.serverprop(tp)
 
         }

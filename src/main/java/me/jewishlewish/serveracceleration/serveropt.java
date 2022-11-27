@@ -14,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class serveropt {
     static void spigotEdit(String ac) {
@@ -46,8 +47,10 @@ public class serveropt {
         String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
 
         if (!content.contains("resource-pack=" + tp)){
-            content = content.replaceAll("\n" + "resource-pack=", "\n" + "resource-pack=" + tp);
-            Files.write(target, content.getBytes(StandardCharsets.UTF_8));
+            List<String> lines = Files.readAllLines(target);
+            lines.set(36, "resource-pack=" + tp);
+            Files.delete(target);
+            Files.write(target, lines);
             Bukkit.getLogger().info("Texture pack successfully placed!");
         }
 
