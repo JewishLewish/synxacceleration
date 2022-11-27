@@ -25,7 +25,6 @@ public class serveropt {
                     Path target= Paths.get(ftype+".yml");
 
                     try {
-                        List<String> lines = Files.readAllLines(target);
                         Files.delete(target);
                         Files.write(target, new returndata().files(ftype).getBytes());
                     } catch (IOException e) {
