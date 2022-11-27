@@ -10,8 +10,13 @@ Acceleration Plugin for Small MC Servers written in a mixture of Kotlin and Java
 
 ``Minechart Chest Deletion`` -> Will delete Minechart Chests in order to remove unncessarily entities. 
 
+``Texture Pack`` -> Uses barebones texture pack for server's that already doesn't use a texture pack. User's have option to use it FPS boost. 
+
+## Lag Machine Combatter
+
+``Snowman Nerf`` -> Disables the A.I. of Snowman so their entity ticks (and snowballs) won't affect the server. 
+
 ## Future Plans
-``Texture Pack`` -> Future texture pack implementation to make users have better fps.
 
 ``Armor Stand Management`` -> Removal of 'moving' armor stands ticks to counter lag .
 
