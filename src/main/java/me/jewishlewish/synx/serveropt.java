@@ -63,7 +63,7 @@ public class serveropt {
 
         if (!content.contains("ALTERNATE_CURRENT")) {
             List<String> lines = Files.readAllLines(target);
-            lines.set(254, "  redstone-implementation: ALTERNATE_CURRENT");
+            lines.set(253, "  redstone-implementation: ALTERNATE_CURRENT");
             Files.delete(target);
             Files.write(target, lines);
         }
