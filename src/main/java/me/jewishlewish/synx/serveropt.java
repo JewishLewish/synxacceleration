@@ -16,7 +16,8 @@ import java.util.List;
 
 public class serveropt {
     static void spigotEdit(String ac) {
-        if (ac.equals("on")) {
+        Bukkit.getLogger().info("The ac is: " + ac);
+        if (ac.equals("true")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {

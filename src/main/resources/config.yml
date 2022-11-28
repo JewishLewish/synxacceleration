@@ -2,8 +2,8 @@
 #Server Optimization    # -> This category focuses on general server optimization
 #########################
 
-#acceleration ('off' / 'on') focuses on the optimization of files. Performance wise: heavy change.
-acceleration: off
+#acceleration ('false' / 'true') focuses on the optimization of files. Performance wise: heavy change.
+acceleration: true
 #deletechestminecart ('false' / 'true') focuses on the removal of minecart chests. Performance: small-medium change (matters on server's size)
 deletechestminecart: false
 #fpstexturepack ('false / 'true') gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.

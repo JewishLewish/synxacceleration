@@ -298,7 +298,7 @@ public class returndata {
                     "  monsters: 45\n" +
                     "  animals: 8\n" +
                     "  water-animals: 5\n" +
-                    "  water-ambient: 10\n" +
+                    "  water-ambient: 8\n" +
                     "  water-underground-creature: 5\n" +
                     "  axolotls: 5\n" +
                     "  ambient: 3\n" +
