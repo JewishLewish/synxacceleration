@@ -9,16 +9,17 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ASLimit implements Listener {
-    private Synx plugin;
+    private final Synx plugin;
     public ASLimit(Synx pl) {
         plugin = pl;
     }
 
     @EventHandler
     public void ARmanagement(CreatureSpawnEvent event) {
-        if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
+        if (Objects.equals(plugin.getConfig().getString("armorstandlimit"), "true")) {
             Entity entity = event.getEntity();
             if ((entity instanceof ArmorStand)) {
                 List<Entity> toRemove = new ArrayList<Entity>();

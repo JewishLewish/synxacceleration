@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.Callable;
 
 public final class Synx extends JavaPlugin {
@@ -16,7 +17,7 @@ public final class Synx extends JavaPlugin {
         Metrics metrics = new Metrics(this,16961);
         metrics.addCustomChart(new Metrics.MultiLineChart("players_and_servers", new Callable<Map<String, Integer>>() {
             @Override
-            public Map<String, Integer> call() throws Exception {
+            public Map<String, Integer> call() {
                 Map<String, Integer> valueMap = new HashMap<>();
                 valueMap.put("servers", 1);
                 valueMap.put("players", Bukkit.getOnlinePlayers().size());
@@ -35,11 +36,11 @@ public final class Synx extends JavaPlugin {
             }
         }
 
-        if (this.getConfig().getString("deletechestminecart").equals("true")) {
+        if (Objects.equals(this.getConfig().getString("deletechestminecart"), "true")) {
             serveropt.minechest();
         }
 
-        if (this.getConfig().getString("fpstexturepack").equals("true")) {
+        if (Objects.equals(this.getConfig().getString("fpstexturepack"), "true")) {
             String tp = "https://www.dropbox.com/s/8wphrs2ht7pr13x/Bare%2BBones%2B1.19.zip?dl=1";
             try {
                 serveropt.serverprop(tp);
@@ -48,10 +49,10 @@ public final class Synx extends JavaPlugin {
             }
 
         }
-        if (this.getConfig().getString("nerfsnowman").equals("true")) {
+        if (Objects.equals(this.getConfig().getString("nerfsnowman"), "true")) {
             getServer().getPluginManager().registerEvents(new Events(this), this);
         }
-        if (this.getConfig().getString("armorstandlimit").equals("true")) {
+        if (Objects.equals(this.getConfig().getString("armorstandlimit"), "true")) {
             getServer().getPluginManager().registerEvents(new ASLimit(this), this);
         }
 
