@@ -3,7 +3,7 @@
 </p>
 
 # Synx
-Acceleration Plugin for Small MC Servers written in a mixture of Kotlin and Java!
+Acceleration Plugin for Small MC Servers written in Java!
 
 ## Optimisation Tools
 ``File Optimisation`` -> When Acceleration is placed to 'fast,' it will optimise the files of spigot, bukkit and paper to make it run more fast.
