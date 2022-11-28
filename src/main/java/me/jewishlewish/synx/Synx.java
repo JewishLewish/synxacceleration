@@ -1,6 +1,9 @@
 package me.jewishlewish.synx;
 
 import org.bukkit.Bukkit;
+import org.bukkit.event.HandlerList;
+import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 
@@ -8,6 +11,8 @@ public final class Synx extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        Metrics metrics = new Metrics(this,16961);
+
         saveDefaultConfig();
         Bukkit.getLogger().info("Synx is operating");
 
