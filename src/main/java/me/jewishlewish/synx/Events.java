@@ -1,13 +1,16 @@
 package me.jewishlewish.synx;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Chunk;
 import org.bukkit.World;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Snowman;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.jetbrains.annotations.NotNull;
 
 public class Events implements Listener {
 
@@ -24,18 +27,17 @@ public class Events implements Listener {
                 ((Snowman) entity).setAI(false);
             }
 
-        } else {
-            CreatureSpawnEvent.getHandlerList().unregister(this);
-        }
+        } else {CreatureSpawnEvent.getHandlerList().unregister(this);}
 
         if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
-            for (World w : Bukkit.getWorlds()) {
-                for (Entity e : w.getEntities()) {
+            Entity entity = event.getEntity();
+            if (entity.getType().equals(EntityType.ARMOR_STAND)) {
+
+                for (Entity e : entity.getLocation().getChunk().getEntities()) {
                     if ((e instanceof ArmorStand)) {
-                        Bukkit.getLogger().info("The e is:" + e);
-                        e.getLocation().getChunk();
-                        int entities = e.getLocation().getChunk().getEntities().length;
-                        Bukkit.getLogger().info("Armorstand count:" + entities);
+
+                        int numentities = e.getLocation().getChunk().getEntities().length;
+                        Bukkit.getLogger().info("Armorstand count:" + numentities);
 
                     }
                 }
