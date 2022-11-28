@@ -27,5 +27,5 @@ Acceleration Plugin for Small MC Servers written in a mixture of Kotlin and Java
 ## How to use it?
 1) Put the plugin's jar file into the plugins folder.
 2) Boot the server so the plugin can give it's config file from there.
-3) Edit the server's config file to the options you want.
+3) Edit the server's config file to the options you want. (for acceleration, change it to 'fast')
 4) Reload the server and the plugin will take it's affect.
