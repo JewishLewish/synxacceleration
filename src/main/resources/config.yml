@@ -18,4 +18,4 @@ disablePluginEventHandlers: [list1, list2, list3]
 #nerfsnowman. ('false' / 'true') Disables the A.I. for snowman. They will no longer move or shoot snowballs. Snowman (and snowballs) are recognized as entities and a collection of them can hurt server's TPS.
 nerfsnowman: false
 #armorstandlimit ('false'/ 'true') This limits the number of armor stands in a chunk to just 5.
-armorstandlimit: true
+armorstandlimit: false

@@ -1,5 +1,6 @@
 package me.jewishlewish.synx;
 
+import me.jewishlewish.synx.events.ASLimit;
 import me.jewishlewish.synx.events.Events;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -47,8 +48,11 @@ public final class Synx extends JavaPlugin {
             }
 
         }
-        if (this.getConfig().getString("fpstexturepack").equals("true")) {
+        if (this.getConfig().getString("nerfsnowman").equals("true")) {
             getServer().getPluginManager().registerEvents(new Events(this), this);
+        }
+        if (this.getConfig().getString("armorstandlimit").equals("true")) {
+            getServer().getPluginManager().registerEvents(new ASLimit(this), this);
         }
 
     }
