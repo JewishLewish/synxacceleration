@@ -1,6 +1,5 @@
 package me.jewishlewish.synx;
 
-import me.jewishlewish.synx.events.ASLimit;
 import me.jewishlewish.synx.events.Events;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
