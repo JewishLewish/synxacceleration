@@ -8,6 +8,8 @@ acceleration: off
 deletechestminecart: false
 #fpstexturepack ('false / 'true') gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
 fpstexturepack: false
+#disablePluginEventHandlers [list1, list2, list3] when putting a plugin here. It will disable EVERY event handler.
+disablePluginEventHandlers: [list1, list2, list3]
 
 #########################
 #Combatting Lag Machines# -> This category focuses on certain parts of the game that can be weaponized as lag machines.

@@ -3,7 +3,6 @@ package me.jewishlewish.synx;
 
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Snowman;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -33,7 +32,7 @@ public class Events implements Listener {
     public void ARmanagement(CreatureSpawnEvent event) {
         if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
             Entity entity = event.getEntity();
-            if (entity.getType().equals(EntityType.ARMOR_STAND)) {
+            if ((entity instanceof ArmorStand)) {
                 List<Entity> toRemove = new ArrayList<Entity>();
                 for (Entity e : entity.getLocation().getChunk().getEntities()) {
                     if ((e instanceof ArmorStand)) {
