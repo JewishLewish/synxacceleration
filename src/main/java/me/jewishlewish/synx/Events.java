@@ -28,7 +28,9 @@ public class Events implements Listener {
             }
 
         } else {CreatureSpawnEvent.getHandlerList().unregister(this);}
-
+    }
+    @EventHandler
+    public void ARmanagement(CreatureSpawnEvent event) {
         if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
             Entity entity = event.getEntity();
             if (entity.getType().equals(EntityType.ARMOR_STAND)) {
@@ -44,6 +46,7 @@ public class Events implements Listener {
                     }
                 }
             }
-        }
+        } else {CreatureSpawnEvent.getHandlerList().unregister(this);}
+
     }
 }
