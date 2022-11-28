@@ -16,7 +16,7 @@ import java.util.List;
 
 public class serveropt {
     static void spigotEdit(String ac) {
-        if (ac.equals("fast")) {
+        if (ac.equals("on")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
@@ -70,15 +70,10 @@ public class serveropt {
 
     public static void distanceedit(String sd, String vd) throws IOException {
         Path target= Paths.get("server.properties");
-        //String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
         List<String> lines = Files.readAllLines(target);
-        if (Integer.parseInt(vd) > 31) {
-            lines.set(26, "view-distance=" + vd);
-            lines.set(38, "simulation-distance=" + sd);
-            Files.delete(target);
-            Files.write(target, lines);
-        } else {
-            Bukkit.getLogger().info("WARNING! DO NOT PLACE THE VIEW DISTANCE OVER 32!");
-        }
+        lines.set(26, "view-distance=" + vd);
+        lines.set(38, "simulation-distance=" + sd);
+        Files.delete(target);
+        Files.write(target, lines);
     }
 }
