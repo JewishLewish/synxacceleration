@@ -3,12 +3,20 @@ package me.jewishlewish.synx;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
+import java.util.concurrent.Callable;
 
 public final class Synx extends JavaPlugin {
 
     @Override
     public void onEnable() {
         Metrics metrics = new Metrics(this,16961);
+        metrics.addCustomChart(new Metrics.SingleLineChart("players", new Callable<Integer>() {
+            @Override
+            public Integer call() throws Exception {
+                // (This is useless as there is already a player chart by default.)
+                return Bukkit.getOnlinePlayers().size();
+            }
+        }));
 
         saveDefaultConfig();
         Bukkit.getLogger().info("Synx is operating");
