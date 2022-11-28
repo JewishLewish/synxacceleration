@@ -15,7 +15,6 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class serveropt {
-
     static void spigotEdit(String ac) {
         if (ac.equals("fast")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
@@ -74,7 +73,7 @@ public class serveropt {
         //String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
         List<String> lines = Files.readAllLines(target);
         lines.set(26, "view-distance=" + vd);
-        lines.set(38, "simulation-distance=10" + sd);
+        lines.set(38, "simulation-distance=" + sd);
         Files.delete(target);
         Files.write(target, lines);
     }
