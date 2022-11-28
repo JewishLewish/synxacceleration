@@ -11,6 +11,12 @@ fpstexturepack: false
 #smarterRedstone ('false' / 'true') replaces the redstone system with faster and alternative versions that reduce redundant block updates, lowering the amount of logic your server has to calculate. Performance: small-medium change (matters on redstone usage on server)
 smarterRedstone: false
 
+#SERVER PROPERTIES EDITING
+#Simulation Distance (Lower is Better, Recommended: 5, Default: 10)-> # of chunks around the player that the server will tick.
+simulationd: 10
+#View Distance (Lower is Better, Recommended: 7-8, Default: 10) -> Distance (in chunks) that will be sent to players. Less View Distance -> More FPS!
+viewd: 10
+
 #########################
 #Combatting Lag Machines# -> This category focuses on certain parts of the game that can be weaponized as lag machines.
 #########################
