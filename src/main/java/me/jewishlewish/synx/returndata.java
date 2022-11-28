@@ -391,7 +391,7 @@ public class returndata {
                     "    enable-zombie-pigmen-portal-spawns: true\n" +
                     "    wither-spawn-sound-radius: 0\n" +
                     "    nerf-spawner-mobs: true\n" +
-                    "    mob-spawn-range: 6\n" +
+                    "    mob-spawn-range: 3\n" +
                     "    dragon-death-sound-radius: 0\n" +
                     "    entity-activation-range:\n" +
                     "      animals: 16\n" +
