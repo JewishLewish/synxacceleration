@@ -1,7 +1,6 @@
 package me.jewishlewish.synx;
 
 import org.bukkit.Bukkit;
-import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 
@@ -14,7 +13,7 @@ public final class Synx extends JavaPlugin {
 
         String ac = this.getConfig().getString("acceleration");
         Bukkit.getLogger().info("Acceleration speed is:" + ac);
-        if (!"none".equals(ac)) {
+        if (!"off".equals(ac) && ("on".equals(ac))) {
             serveropt.spigotEdit(ac);
         }
 

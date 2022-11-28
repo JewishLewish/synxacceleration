@@ -2,16 +2,16 @@
 #Server Optimization    # -> This category focuses on general server optimization
 #########################
 
-#acceleration focuses on the optimization of files. Performance wise: heavy change
-acceleration: none
-#deletechestminecart focuses on the removal of minecart chests. Performance: small-medium change (matters on server's size)
+#acceleration ('off' / 'on') focuses on the optimization of files. Performance wise: heavy change.
+acceleration: off
+#deletechestminecart ('false' / 'true')focuses on the removal of minecart chests. Performance: small-medium change (matters on server's size)
 deletechestminecart: false
-#fpstexturepack gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
+#fpstexturepack ('false / 'true') gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
 fpstexturepack: false
 
 #########################
 #Combatting Lag Machines# -> This category focuses on certain parts of the game that can be weaponized as lag machines.
 #########################
 
-#nerfsnowman. Disables the A.I. for snowman. They will no longer move or shoot snowballs. Snowman (and snowballs) are recognized as entities and a collection of them can hurt server's TPS.
+#nerfsnowman. ('false' / 'true') Disables the A.I. for snowman. They will no longer move or shoot snowballs. Snowman (and snowballs) are recognized as entities and a collection of them can hurt server's TPS.
 nerfsnowman: false
