@@ -138,28 +138,28 @@ public class returndata {
                     "    creative-arrow-despawn-rate: 60\n" +
                     "    despawn-ranges:\n" +
                     "      ambient:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 96\n" +
                     "        soft: 32\n" +
                     "      axolotls:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 96\n" +
                     "        soft: 32\n" +
                     "      creature:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 96\n" +
                     "        soft: 32\n" +
                     "      misc:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 96\n" +
                     "        soft: 32\n" +
                     "      monster:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 96\n" +
                     "        soft: 32\n" +
                     "      underground_water_creature:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 64\n" +
                     "        soft: 32\n" +
                     "      water_ambient:\n" +
                     "        hard: 64\n" +
                     "        soft: 32\n" +
                     "      water_creature:\n" +
-                    "        hard: 128\n" +
+                    "        hard: 64\n" +
                     "        soft: 32\n" +
                     "    disable-mob-spawner-spawn-egg-transformation: false\n" +
                     "    duplicate-uuid:\n" +
