@@ -68,4 +68,14 @@ public class serveropt {
             Files.write(target, lines);
         }
     }
+
+    public static void distanceedit(String sd, String vd) throws IOException {
+        Path target= Paths.get("server.properties");
+        //String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
+        List<String> lines = Files.readAllLines(target);
+        lines.set(26, "view-distance=" + vd)
+        lines.set(38, "simulation-distance=10" + sd);
+        Files.delete(target);
+        Files.write(target, lines);
+    }
 }
