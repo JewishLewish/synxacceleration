@@ -12,6 +12,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Events implements Listener {
 
     private Synx plugin;
@@ -32,13 +35,15 @@ public class Events implements Listener {
         if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
             Entity entity = event.getEntity();
             if (entity.getType().equals(EntityType.ARMOR_STAND)) {
-
+                List<Entity> toRemove = new ArrayList<Entity>();
                 for (Entity e : entity.getLocation().getChunk().getEntities()) {
                     if ((e instanceof ArmorStand)) {
-
-                        int numentities = e.getLocation().getChunk().getEntities().length;
-                        Bukkit.getLogger().info("Armorstand count:" + numentities);
-
+                        toRemove.add(e);
+                        if (toRemove.size() > 20) {
+                            toRemove.remove(entity);
+                        } else if (toRemove.size() > 4) {
+                            entity.remove();
+                        }
                     }
                 }
             }
