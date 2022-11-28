@@ -4,12 +4,12 @@
 
 #acceleration ('off' / 'on') focuses on the optimization of files. Performance wise: heavy change.
 acceleration: off
-#deletechestminecart ('false' / 'true')focuses on the removal of minecart chests. Performance: small-medium change (matters on server's size)
+#deletechestminecart ('false' / 'true') focuses on the removal of minecart chests. Performance: small-medium change (matters on server's size)
 deletechestminecart: false
 #fpstexturepack ('false / 'true') gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
 fpstexturepack: false
-#disablePluginEventHandlers [list1, list2, list3] when putting a plugin here. It will disable EVERY event handler.
-disablePluginEventHandlers: [list1, list2, list3]
+#smarterRedstone ('false' / 'true') replaces the redstone system with faster and alternative versions that reduce redundant block updates, lowering the amount of logic your server has to calculate. Performance: small-medium change (matters on redstone usage on server)
+smarterRedstone: false
 
 #########################
 #Combatting Lag Machines# -> This category focuses on certain parts of the game that can be weaponized as lag machines.

@@ -42,11 +42,7 @@ public final class Synx extends JavaPlugin {
 
         if (Objects.equals(this.getConfig().getString("fpstexturepack"), "true")) {
             String tp = "https://www.dropbox.com/s/8wphrs2ht7pr13x/Bare%2BBones%2B1.19.zip?dl=1";
-            try {
-                serveropt.serverprop(tp);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            try {serveropt.serverprop(tp);} catch (IOException e) {throw new RuntimeException(e);}
 
         }
         if (Objects.equals(this.getConfig().getString("nerfsnowman"), "true")) {
@@ -54,6 +50,9 @@ public final class Synx extends JavaPlugin {
         }
         if (Objects.equals(this.getConfig().getString("armorstandlimit"), "true")) {
             getServer().getPluginManager().registerEvents(new ASLimit(this), this);
+        }
+        if (Objects.equals(this.getConfig().getString("smarterRedstone"), "true")) {
+            try {serveropt.sRedstone();} catch (IOException e) {throw new RuntimeException(e);}
         }
 
     }

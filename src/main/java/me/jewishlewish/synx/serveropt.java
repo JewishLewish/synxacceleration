@@ -56,4 +56,16 @@ public class serveropt {
         }
 
     }
+
+    public static void sRedstone() throws IOException {
+        Path target= Paths.get("config/paper-world-defaults.yml");
+        String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
+
+        if (!content.contains("ALTERNATE_CURRENT")) {
+            List<String> lines = Files.readAllLines(target);
+            lines.set(254, "  redstone-implementation: ALTERNATE_CURRENT");
+            Files.delete(target);
+            Files.write(target, lines);
+        }
+    }
 }
