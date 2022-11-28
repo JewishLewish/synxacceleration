@@ -41,7 +41,6 @@ public class serveropt {
                 }
             }
         }
-                
     }
 
     public static void serverprop(String tp) throws IOException {
