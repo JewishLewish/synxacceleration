@@ -72,9 +72,13 @@ public class serveropt {
         Path target= Paths.get("server.properties");
         //String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
         List<String> lines = Files.readAllLines(target);
-        lines.set(26, "view-distance=" + vd);
-        lines.set(38, "simulation-distance=" + sd);
-        Files.delete(target);
-        Files.write(target, lines);
+        if (Integer.parseInt(vd) > 31) {
+            lines.set(26, "view-distance=" + vd);
+            lines.set(38, "simulation-distance=" + sd);
+            Files.delete(target);
+            Files.write(target, lines);
+        } else {
+            Bukkit.getLogger().info("WARNING! DO NOT PLACE THE VIEW DISTANCE OVER 32!");
+        }
     }
 }
