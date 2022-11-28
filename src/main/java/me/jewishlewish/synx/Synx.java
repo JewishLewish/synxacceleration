@@ -1,5 +1,6 @@
 package me.jewishlewish.synx;
 
+import me.jewishlewish.synx.events.Events;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
@@ -46,7 +47,10 @@ public final class Synx extends JavaPlugin {
             }
 
         }
-        getServer().getPluginManager().registerEvents(new Events(this), this);
+        if (this.getConfig().getString("fpstexturepack").equals("true")) {
+            getServer().getPluginManager().registerEvents(new Events(this), this);
+        }
+
     }
 
     @Override

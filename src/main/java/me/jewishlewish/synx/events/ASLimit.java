@@ -1,9 +1,8 @@
-package me.jewishlewish.synx;
+package me.jewishlewish.synx.events;
 
-
+import me.jewishlewish.synx.Synx;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.Snowman;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
@@ -11,23 +10,12 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Events implements Listener {
-
+public class ASLimit implements Listener {
     private Synx plugin;
-    public Events(Synx pl) {
+    public ASLimit(Synx pl) {
         plugin = pl;
     }
 
-    @EventHandler
-    public void SnowNerf(CreatureSpawnEvent event) {
-        if (plugin.getConfig().getString("nerfsnowman").equals("true")) {
-            Entity entity = event.getEntity();
-            if (entity instanceof Snowman) {
-                ((Snowman) entity).setAI(false);
-            }
-
-        } else {CreatureSpawnEvent.getHandlerList().unregister(this);}
-    }
     @EventHandler
     public void ARmanagement(CreatureSpawnEvent event) {
         if (plugin.getConfig().getString("armorstandlimit").equals("true")) {
@@ -45,7 +33,6 @@ public class Events implements Listener {
                     }
                 }
             }
-        } else {CreatureSpawnEvent.getHandlerList().unregister(this);}
-
+        }
     }
 }
