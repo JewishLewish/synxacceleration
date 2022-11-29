@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class serveropt {
-    static void spigotEdit(String ac) {
+    static void spigotEdit(String ac, String rc) {
         Bukkit.getLogger().info("The ac is: " + ac);
         if (ac.equals("true")) {
             String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
@@ -25,7 +25,7 @@ public class serveropt {
 
                     try {
                         Files.delete(target);
-                        Files.write(target, new returndata().files(ftype).getBytes());
+                        Files.write(target, new returndata().files(ftype, rc).getBytes());
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

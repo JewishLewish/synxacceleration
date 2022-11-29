@@ -31,7 +31,7 @@ public final class Synx extends JavaPlugin {
         Bukkit.getLogger().info("Acceleration speed is:" + ac);
 
         if (ac.equals("true")) {
-            serveropt.spigotEdit(ac);
+            serveropt.spigotEdit(ac, this.getConfig().getString("nerfsnowman"));
         }
 
         if (Objects.equals(this.getConfig().getString("deletechestminecart"), "true")) {
@@ -44,9 +44,6 @@ public final class Synx extends JavaPlugin {
         }
         if (Objects.equals(this.getConfig().getString("nerfsnowman"), "true")) {
             getServer().getPluginManager().registerEvents(new Events(this), this);
-        }
-        if (Objects.equals(this.getConfig().getString("smarterRedstone"), "true")) {
-            try {serveropt.sRedstone();} catch (IOException e) {throw new RuntimeException(e);}
         }
         if (this.getConfig().getString("simulationd") != null && this.getConfig().getString("viewd") != null) {
             try {serveropt.distanceedit(this.getConfig().getString("simulationd"), this.getConfig().getString("viewd"));} catch (IOException e) {throw new RuntimeException(e);}}

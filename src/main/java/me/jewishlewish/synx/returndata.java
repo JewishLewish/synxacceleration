@@ -1,9 +1,16 @@
 package me.jewishlewish.synx;
 
 public class returndata {
-    public String files(String dn) {
+    public String files(String dn, String rc) {
         String value = null;
         if (dn.equals("config/paper-world-defaults")) {
+            String Rconfig = new;
+            if (rc.equals("true")) {
+                Rconfig = "ALTERNATE_CURRENT";
+            } else {
+                Rconfig = "VANILLA";
+            }
+
             value = "# This is the world defaults configuration file for Paper.\n" +
                     "# As you can see, there's a lot to configure. Some options may impact gameplay, so use\n" +
                     "# with caution, and make sure you know what each option does before configuring.\n" +
@@ -257,7 +264,7 @@ public class returndata {
                     "  disable-sprint-interruption-on-attack: false\n" +
                     "  light-queue-size: 20\n" +
                     "  max-leash-distance: 10.0\n" +
-                    "  redstone-implementation: VANILLA\n" +
+                    "  redstone-implementation: " + Rconfig + "\n" +
                     "  shield-blocking-delay: 5\n" +
                     "  show-sign-click-command-failure-msgs-to-player: false\n" +
                     "  update-pathfinding-on-block-update: true\n" +
