@@ -1,11 +1,13 @@
 package me.jewishlewish.synx;
 
+import org.bukkit.Bukkit;
+
 public class returndata {
     public String files(String dn, String rc) {
         String value = null;
         if (dn.equals("config/paper-world-defaults")) {
             String Rconfig = null;
-            if (rc.equals("true")) {
+            if (rc.contains("true")) {
                 Rconfig = "ALTERNATE_CURRENT";
             } else {
                 Rconfig = "VANILLA";

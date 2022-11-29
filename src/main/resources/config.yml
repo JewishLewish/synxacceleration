@@ -8,7 +8,7 @@ acceleration: true
 deletechestminecart: false
 #fpstexturepack ('false / 'true') gives users an option to change their texture pack to the barebones texture pack which can help with client's fps. Performance: Users that uses integrated graphics (iGPUs) can expect a boost in FPS.
 fpstexturepack: false
-#smarterRedstone ('false' / 'true') replaces the redstone system with faster and alternative versions that reduce redundant block updates, lowering the amount of logic your server has to calculate. Performance: small-medium change (matters on redstone usage on server)
+#smarterRedstone -> set acceleration 'true' ('false' / 'true') replaces the redstone system with faster and alternative versions that reduce redundant block updates, lowering the amount of logic your server has to calculate. Performance: small-medium change (matters on redstone usage on server)
 smarterRedstone: false
 
 #SERVER PROPERTIES EDITING
