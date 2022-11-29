@@ -48,7 +48,11 @@ public class serveropt {
 
         if (!content.contains("resource-pack=" + tp)){
             List<String> lines = Files.readAllLines(target);
-            lines.set(36, "resource-pack=" + tp);
+            if(Bukkit.getVersion().contains("1.18")) {
+                lines.set(34, "resource-pack=" + tp);
+            } else if (Bukkit.getVersion().contains("1.19")){
+                lines.set(36, "resource-pack=" + tp);
+            }
             Files.delete(target);
             Files.write(target, lines);
             Bukkit.getLogger().info("Texture pack successfully placed!");
@@ -56,23 +60,16 @@ public class serveropt {
 
     }
 
-    public static void sRedstone() throws IOException {
-        Path target= Paths.get("config/paper-world-defaults.yml");
-        String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
-
-        if (!content.contains("ALTERNATE_CURRENT")) {
-            List<String> lines = Files.readAllLines(target);
-            lines.set(253, "  redstone-implementation: ALTERNATE_CURRENT");
-            Files.delete(target);
-            Files.write(target, lines);
-        }
-    }
-
     public static void distanceedit(String sd, String vd) throws IOException {
         Path target= Paths.get("server.properties");
         List<String> lines = Files.readAllLines(target);
-        lines.set(26, "view-distance=" + vd);
-        lines.set(38, "simulation-distance=" + sd);
+        if(Bukkit.getVersion().contains("1.18")) {
+            lines.set(24, "view-distance=" + vd);
+            lines.set(36, "simulation-distance=" + sd);
+        } else if (Bukkit.getVersion().contains("1.19")){
+            lines.set(26, "view-distance=" + vd);
+            lines.set(38, "simulation-distance=" + sd);
+        }
         Files.delete(target);
         Files.write(target, lines);
     }
