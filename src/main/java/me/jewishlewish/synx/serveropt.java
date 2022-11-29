@@ -12,12 +12,22 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 public class serveropt {
     static void spigotEdit(String ac, String rc) {
         if (ac.equals("true")) {
-            String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
+            List<String> fprop = Arrays.asList();
+            fprop.add("bukkit");
+            fprop.add("spigot");
+
+            if(Bukkit.getVersion().contains("1.18")) {
+                fprop.add("paper");
+            } else if (Bukkit.getVersion().contains("1.19")){
+                fprop.add("config/paper-world-defaults");
+            }
+
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
                     Path target= Paths.get(ftype+".yml");
