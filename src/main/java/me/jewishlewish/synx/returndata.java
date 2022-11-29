@@ -4,7 +4,7 @@ public class returndata {
     public String files(String dn, String rc) {
         String value = null;
         if (dn.equals("config/paper-world-defaults")) {
-            String Rconfig = new;
+            String Rconfig = null;
             if (rc.equals("true")) {
                 Rconfig = "ALTERNATE_CURRENT";
             } else {
