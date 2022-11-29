@@ -12,13 +12,14 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class serveropt {
     static void spigotEdit(String ac, String rc) {
         if (ac.equals("true")) {
-            List<String> fprop = Arrays.asList();
+            List<String> fprop = new ArrayList<>();
             fprop.add("bukkit");
             fprop.add("spigot");
 
