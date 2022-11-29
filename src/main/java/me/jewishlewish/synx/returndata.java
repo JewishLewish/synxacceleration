@@ -1,7 +1,5 @@
 package me.jewishlewish.synx;
 
-import org.bukkit.Bukkit;
-
 public class returndata {
     public String files(String dn, String rc) {
         String value = null;
