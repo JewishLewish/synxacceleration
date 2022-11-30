@@ -34,18 +34,13 @@ public class serveropt {
     public static void minechest(){
         for (World w : Bukkit.getWorlds()) {
             for (Entity e : w.getEntities()) {
-                if ((e instanceof StorageMinecart)) {
-                    e.remove();
-                }
-            }
-        }
+                if ((e instanceof StorageMinecart)) {e.remove();}}}
     }
 
     public static void serverprop(String tp) throws IOException {
         Path target= Paths.get("server.properties");
-        String content = new String(Files.readAllBytes(target), StandardCharsets.UTF_8);
 
-        if (!content.contains("resource-pack=" + tp)){
+        if (!new String(Files.readAllBytes(target), StandardCharsets.UTF_8).contains("resource-pack=" + tp)){
             List<String> lines = Files.readAllLines(target);
             lines.set(36, "resource-pack=" + tp);
             Files.delete(target);
