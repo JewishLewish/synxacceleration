@@ -21,7 +21,6 @@ public class serveropt {
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
                     Path target= Paths.get(ftype+".yml");
-
                     try {
                         Files.delete(target);
                         Files.write(target, new returndata().files(ftype, rc).getBytes());
