@@ -17,7 +17,7 @@ import java.util.List;
 public class serveropt {
     static void spigotEdit(String ac, String rc) {
         if (ac.equals("true")) {
-            String[] fprop = {"bukkit", "spigot", "config/paper-world-defaults"};
+            String[] fprop = {"bukkit", "spigot", "paper"};
             for(String ftype : fprop){
                 if (new File(ftype+".yml").exists()) {
                     Path target= Paths.get(ftype+".yml");
@@ -42,7 +42,7 @@ public class serveropt {
 
         if (!new String(Files.readAllBytes(target), StandardCharsets.UTF_8).contains("resource-pack=" + tp)){
             List<String> lines = Files.readAllLines(target);
-            lines.set(36, "resource-pack=" + tp);
+            lines.set(34, "resource-pack=" + tp);
             Files.delete(target);
             Files.write(target, lines);
             Bukkit.getLogger().info("Texture pack successfully placed!");
@@ -53,8 +53,8 @@ public class serveropt {
     public static void distanceedit(String sd, String vd) throws IOException {
         Path target= Paths.get("server.properties");
         List<String> lines = Files.readAllLines(target);
-        lines.set(26, "view-distance=" + vd);
-        lines.set(38, "simulation-distance=" + sd);
+        lines.set(24, "view-distance=" + vd);
+        lines.set(36, "simulation-distance=" + sd);
         Files.delete(target);
         Files.write(target, lines);
     }
