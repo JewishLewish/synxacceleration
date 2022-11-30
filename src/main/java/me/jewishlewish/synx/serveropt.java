@@ -25,7 +25,7 @@ public class serveropt {
                         Files.delete(target);
                         Files.write(target, new returndata().files(ftype, rc).getBytes());
                     } catch (IOException e) {
-                        throw new RuntimeException(e);
+                        Bukkit.getLogger().info("Can't seem to find the file: " + ftype + ".yml");
                     }
                 }
             }
