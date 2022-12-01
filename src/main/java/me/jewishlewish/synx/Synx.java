@@ -30,7 +30,6 @@ public final class Synx extends JavaPlugin {
         String ac = this.getConfig().getString("acceleration");
         Bukkit.getLogger().info("Acceleration speed is:" + ac);
 
-        assert ac != null;
         if (ac.equals("true")) {
             serveropt.spigotEdit(ac, this.getConfig().getString("smarterRedstone"));
         }
