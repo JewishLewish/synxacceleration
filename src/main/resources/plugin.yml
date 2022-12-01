@@ -1,4 +1,4 @@
 name: Synx
-version: '${project.version}'
+version: ALPHA
 main: me.jewishlewish.synx.Synx
 api-version: 1.18
