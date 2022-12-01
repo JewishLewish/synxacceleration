@@ -8,7 +8,6 @@ import org.bukkit.entity.minecart.StorageMinecart;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -39,9 +38,9 @@ public class serveropt {
 
     public static void serverprop(String tp) throws IOException {
         Path target= Paths.get("server.properties");
+        List<String> lines = Files.readAllLines(target);
 
-        if (!new String(Files.readAllBytes(target), StandardCharsets.UTF_8).contains("resource-pack=" + tp)){
-            List<String> lines = Files.readAllLines(target);
+        if (!lines.get(34).equals("resource-pack=" + tp)){
             lines.set(34, "resource-pack=" + tp);
             Files.delete(target);
             Files.write(target, lines);
@@ -53,8 +52,14 @@ public class serveropt {
     public static void distanceedit(String sd, String vd) throws IOException {
         Path target= Paths.get("server.properties");
         List<String> lines = Files.readAllLines(target);
-        lines.set(24, "view-distance=" + vd);
-        lines.set(36, "simulation-distance=" + sd);
+        if (!lines.get(24).equals("view-distance=" + vd)) {
+            lines.set(24, "view-distance=" + vd);
+        } if (!lines.get(36).equals("simulation-distance=" + sd)) {
+            lines.set(36, "simulation-distance=" + sd);
+        } else {
+            return;
+        }
+
         Files.delete(target);
         Files.write(target, lines);
     }
