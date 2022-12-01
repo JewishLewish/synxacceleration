@@ -12,17 +12,20 @@ Acceleration Plugin for Small MC Servers written in Java!
 
 ``Texture Pack`` -> Uses barebones texture pack for server's that already doesn't use a texture pack. User's have option to use it FPS boost. 
 
-## Lag Machine Combatter
+``Smarter Redstone`` -> (For Paper Servers) Uses a more efficient redstone method
+
+### Server Properties Editing
+``View Distance`` -> Adjust the server's view distance so users can load in less chunks
+
+``Simulation Distance`` -> Adjust the server's simulation distance so the server can run ticks at a lower chunk distance
+
+### Lag Machine Combatter
 
 ``Snowman Nerf`` -> Disables the A.I. of Snowman so their entity ticks (and snowballs) won't affect the server. 
 
-## Future Plans
-
-``Armor Stand Management`` -> Removal of 'moving' armor stands ticks to counter lag .
-
-``Mob Merge`` -> Making mobs merge.
-
-``Emergency Mode`` -> Several Changes to files so it can handle severe bad TPS attacks .
+<p align="center">
+  <img src="https://cdn.discordapp.com/attachments/660227834500874276/1047948760141021224/Desktop_-_3.png" width="1080">
+</p>
 
 ## How to use it?
 1) Put the plugin's jar file into the plugins folder.
