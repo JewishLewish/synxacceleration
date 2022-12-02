@@ -4,7 +4,7 @@ public class returndata {
     public String files(String dn, String rc) {
         String value = null;
         if (dn.equals("config/paper-world-defaults")) {
-            String Rconfig = null;
+            String Rconfig;
             if (rc.contains("true")) {Rconfig = "ALTERNATE_CURRENT";} else {Rconfig = "VANILLA";}
             value = "# This is the world defaults configuration file for Paper.\n" +
                     "# As you can see, there's a lot to configure. Some options may impact gameplay, so use\n" +
