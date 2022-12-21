@@ -27,6 +27,7 @@ public final class Synx extends JavaPlugin {
         saveDefaultConfig();
         Bukkit.getLogger().info("Synx is operating");
 
+        
         String ac = this.getConfig().getString("acceleration");
         Bukkit.getLogger().info("Acceleration speed is:" + ac);
 
