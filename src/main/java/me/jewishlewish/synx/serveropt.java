@@ -56,7 +56,7 @@ public class serveropt {
 
         if (!lines.get(26).equals("view-distance=" + vd)) {
             lines.set(26, "view-distance=" + vd);
-        } if (!lines.get(38).equals("view-distance=" + vd)) {
+        } if (!lines.get(38).equals("simulation-distance=" + sd)) {
             lines.set(38, "simulation-distance=" + sd);
         } else {
             return;
