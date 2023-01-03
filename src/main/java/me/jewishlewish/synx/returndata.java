@@ -2,7 +2,7 @@ package me.jewishlewish.synx;
 
 public class returndata {
     public String files(String dn, String rc) {
-        String value = null;
+        String value;
         if (dn.equals("config/paper-world-defaults")) {
             String Rconfig;
             if (rc.contains("true")) {Rconfig = "ALTERNATE_CURRENT";} else {Rconfig = "VANILLA";}
