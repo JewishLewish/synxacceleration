@@ -2,6 +2,8 @@
 Synx Accelerator is officially archived on 9/19/2023. Project, at first, started out great but one of the biggest problems with the project is trying to implement it into different versions and staying up to date with spigot/paper files. It's better if you edit/optimize your own spigot/paper/bukkit files instead of using a MC plugin to do the work. Maybe the plugin will come back but for now it's going to be remain archived. 
 
 
+##
+
 <p align="center">
   <img src="https://repository-images.githubusercontent.com/570765321/7a3ac59a-e9fa-42a5-9a7f-cb66231fe028" width="1080">
 </p>
